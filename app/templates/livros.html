@@ -52,29 +52,29 @@ bg-success">
         </div>
     </nav>
     <div class="container mt-5">
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <b>
-                <li{% if message.tags %} class="{{ message.tags }}" {% endif %} style="color: red;">{{
-                    message }}</li>
-            </b>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        <h2 class="mb-4">Tabela de Autores</h2>
+        <h2 class="mb-4">Tabela de Livros</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">Cidade</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Editora</th>
+                    <th scope="col">Gênero</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Data Publicação</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
-                {% for autores in autores %}
+                {% for livros in livros %}
                 <tr>
-                    <td>{{ autores.nome }}</td>
-                    <td>{{ autores.cidade }}</td>
+                    <td>{{ livros.nome }}</td>
+                    <td>{{ livros.autor }}</td>
+                    <td>{{ livros.editora }}</td>
+                    <td>{{ livros.genero }} </td>
+                    <td>{{ livros.preco }}</td>
+                    <td>{{ livros.data_plub }}</td>
+                    <td>{{ livros.status }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -82,8 +82,7 @@ bg-success">
     </div>
     <!-- Incluindo jQuery e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/di
-st/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/b
 ootstrap.min.js"></script>
 </body>

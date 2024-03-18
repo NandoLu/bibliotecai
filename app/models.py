@@ -71,7 +71,7 @@ class Emprestimo(models.Model):
     leitor = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     
     class Meta:
-        verbose_name_plural = "Categorias"
+        verbose_name_plural = "Emprestimos"
 
     def __str__(self):
         return f'{self.dataemprestimo} {self.livro} {self.leitor}'
