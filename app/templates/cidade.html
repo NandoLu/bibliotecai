@@ -28,9 +28,6 @@ bg-success">
                     <a class="nav-link text-dark" href="/livros/">Livros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/reserva/">Reserva</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-dark" href="/cidade/">Cidade</a>
                 </li>
                 <li class="nav-item">
@@ -66,13 +63,13 @@ bg-success">
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome</th>
+                    <th scope="col">Cidade</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidade in cidade %}
+                {% for cidades in cidades %}
                 <tr>
-                    <td>{{ cidade.nome }}</td>
+                    <td>{{ cidades.nome }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

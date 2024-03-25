@@ -28,9 +28,6 @@ bg-success">
                     <a class="nav-link text-dark" href="/livros/">Livros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/reserva/">Reserva</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-dark" href="/cidade/">Cidade</a>
                 </li>
                 <li class="nav-item">
@@ -67,14 +64,16 @@ bg-success">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">Cidade</th>
+                    <th scope="col">cpf</th>
+                    <th scope="col">e-mail</th>
                 </tr>
             </thead>
             <tbody>
-                {% for autor in autor %}
+                {% for leitores in leitores %}
                 <tr>
-                    <td>{{ autor.nome }}</td>
-                    <td>{{ autor.cidade }}</td>
+                    <td>{{ leitores.nome }}</td>
+                    <td>{{ leitores.cpf }}</td>
+                    <td>{{ leitores.email }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
